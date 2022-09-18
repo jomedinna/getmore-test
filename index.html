@@ -16,8 +16,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
 <body>
-	<!-- <img src="assets/img/design.png" style="position: absolute; top: 0; left: 0; opacity: 0.7; width: 100%; z-index:100;"> -->
-
 	<header class="header d-flex justify-between">
 		<div class="header__brand">
 			<img src="assets/img/global/logo.svg" alt="raquetas">
@@ -124,15 +122,6 @@
 				<div class="slider--item">
 					<img src="assets/img/slider/item.png" alt="item" title="item">
 				</div>
-				<div class="slider--item">
-					<img src="assets/img/slider/item.png" alt="item" title="item">
-				</div>
-				<div class="slider--item">
-					<img src="assets/img/slider/item.png" alt="item" title="item">
-				</div>
-				<div class="slider--item">
-					<img src="assets/img/slider/item.png" alt="item" title="item">
-				</div>
 			</div>
 		</div>
 	</section>
@@ -191,35 +180,6 @@
 		</div>
 	</footer>
 
-	<script>
-		$(document).ready(function(){
-			var owl = $('.owl-carousel');
-			owl.owlCarousel({
-				loop: true,
-				margin: 35,
-				dots: true,
-				autoWidth: true,
-				dotsContainer: '.slider--dots',
-				responsiveClass:true,
-				items: 3,
-				responsive : {
-					0: {
-						margin: 10
-					},
-					575: {
-						margin: 35,
-					}
-				}
-			});
-
-			$('.slider--prev').click(function() {
-			    owl.trigger('prev.owl.carousel');
-			})
-
-			$('.slider--next').click(function() {
-			    owl.trigger('next.owl.carousel', [300]);
-			});
-		});
-	</script>
+	<script src="assets/js/slider.js"></script>
 </body>
 </html>
