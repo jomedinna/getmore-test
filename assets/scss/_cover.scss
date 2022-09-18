@@ -1,0 +1,22 @@
+.cover {
+	position: relative;
+
+	img {
+		height: auto;
+		width: 100%;
+		display: block;
+	}
+
+	@media screen and (max-width: 575px) {
+		width: 100%;
+		padding-bottom: 80%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200%;
+		}
+	}
+}

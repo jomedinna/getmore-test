@@ -1,0 +1,186 @@
+/**************************************/
+/********** Fonts *********************/
+/**************************************/
+
+@font-face {
+	font-family: 'HelvetiNeue';
+	src: url('../fonts/helvetica-neue/regular.ttf'); 
+}
+
+@font-face {
+	font-family: 'HelvetiNeueMedium';
+	src: url('../fonts/helvetica-neue/medium.ttf'); 
+}
+
+@font-face {
+	font-family: 'HelvetiNeueBold';
+	src: url('../fonts/helvetica-neue/bold.ttf'); 
+}
+
+/**************************************/
+/********** Root variables ************/
+/**************************************/
+
+:root {
+	--viewport-width: 1440;
+	--current-viewport: 100vw;
+
+	--min-width: 1024px;
+	--max-width: 3840px;
+	--clamp-width: calc(clamp(var(--min-width), var(--viewport-width), var(--max-width)));
+
+
+	--primary-regular-font-family: 'HelvetiNeue';
+	--primary-medium-font-family: 'HelvetiNeueMedium';
+	--primary-bold-font-family: 'HelvetiNeueBold';
+	--font-size-xs: 0.9vw;
+	--font-size-sm: 1.1vw;
+	--font-size-base: 1.3vw;
+
+	--header-1: 3.5vw;
+	--header-2: 3.4vw;
+
+
+	/* Text color palette */
+	--base-text-color: #1e2335;
+	--secondary-text-color: #787878;
+	--alter-text-color: #ffffff;
+	--highlight-text-color: #cbe346;
+
+	/* Theme color palette */
+	--primary-color: #f3f4f8;
+	--secondary-color: #ffffff;
+	--highlight-color: #cbe346;
+
+
+	--primary-btn-border: #282e47;
+	--primary-btn-color: #273048;
+	--primary-btn-background: transparent;
+
+	--secondary-btn-border: #ffffff;
+	--secondary-btn-color: #ffffff;
+	--secondary-btn-background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--font-size-xs: 1.1vw;
+		--font-size-sm: 1.3vw;
+		--font-size-base: 1.6vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	:root {
+		--font-size-xs: 2.2vw;
+		--font-size-sm: 2.4vw;
+		--font-size-base: 3vw;
+
+		--header-1: 6.5vw;
+		--header-2: 7.1vw;
+	}
+}
+
+/**************************************/
+/********** Global ********************/
+/**************************************/
+
+body, html {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-family: var(--primary-regular-font-family);
+	font-weight: normal;
+	font-stretch: normal;
+
+	p {
+		font-size: 18px;
+	}
+}
+
+.btn {
+	padding: 1.2vw 2vw;
+	border: 1px solid;
+	width: auto;
+	max-width: 14.5vw;
+    min-width: 13vw;
+	border-radius: 500px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-top: 15px;
+	font-size: var(--font-size-xs);
+	letter-spacing: 1px;
+	line-height: 19px;
+
+	@media screen and (max-width: 1080px) {
+		padding: 1vw 2vw;
+	}
+
+	@media screen and (max-width: 991px) {
+		max-width: 16vw;
+	}
+
+	@media screen and (max-width: 768px) {
+		max-width: 20vw;
+	}
+
+	@media screen and (max-width: 575px) {
+		padding: 1vw 3vw;
+		max-width: 35vw;
+	}
+}
+
+.btn--primary {
+	border-color: var(--primary-btn-border);
+	color: var(--primary-btn-color);
+	background-color: var(--primary-btn-background);
+
+	.iconColor {
+		fill: var(--primary-btn-color);
+	}
+
+	svg {
+		width: 3vw;
+	}
+}
+
+.btn--secondary {
+	border-color: var(--secondary-btn-border);
+	color: var(--secondary-btn-color);
+	background-color: var(--secondary-btn-background);
+
+	.iconColor {
+		fill: var(--secondary-btn-color);
+	}
+
+	svg {
+		width: 3vw;
+	}
+}
+
+/**************************************/
+/********** Helpers *******************/
+/**************************************/
+.d-flex {
+	display: flex;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
