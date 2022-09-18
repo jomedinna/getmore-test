@@ -196,4 +196,14 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 425px) {
+		&__container {
+			#slider {
+					img {
+					width: 65vw;
+				}
+			}
+		}
+	}
 }
