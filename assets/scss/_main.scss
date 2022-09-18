@@ -72,9 +72,9 @@
 
 @media screen and (max-width: 575px) {
 	:root {
-		--font-size-xs: 2.2vw;
-		--font-size-sm: 2.4vw;
-		--font-size-base: 3vw;
+		--font-size-xs: 2.6vw;
+		--font-size-sm: 2.8vw;
+		--font-size-base: 3.4vw;
 
 		--header-1: 6.5vw;
 		--header-2: 7.1vw;
@@ -126,7 +126,7 @@ body, html {
 
 	@media screen and (max-width: 575px) {
 		padding: 1vw 3vw;
-		max-width: 35vw;
+		max-width: 40vw;
 	}
 }
 
